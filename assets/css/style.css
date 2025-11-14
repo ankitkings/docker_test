@@ -1,0 +1,69 @@
+/* Basic reset + fonts */
+:root{--accent:#ffc107;--dark:#0b1220;}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6;color:#222;background:#fff}
+a{transition:all .15s}
+
+/* Nav */
+nav.navbar{padding:0.6rem 0}
+
+/* Hero */
+.hero-section{
+  height:100vh;
+  background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(11,18,32,0.6)), url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+}
+.hero-section h1{letter-spacing:0.6px}
+
+/* Page header */
+.page-header{
+  height:40vh;
+  background: linear-gradient(180deg, rgba(11,18,32,0.5), rgba(11,18,32,0.5)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.page-header h1{font-size:2.5rem;}
+
+/* Cards & images */
+.card img{height:220px;object-fit:cover}
+
+/* Footer */
+footer{font-size:0.95rem}
+
+/* WhatsApp floating */
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  z-index:9999;
+}
+.whatsapp-float img{width:28px;height:28px;filter: invert(1) contrast(2)}
+
+/* Project card hover */
+.project-card{transition:transform .25s, box-shadow .25s}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,.12)}
+
+/* Simple animation utilities */
+.fade-up{opacity:0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease}
+.fade-up.delay-1{transition-delay:.12s}
+.fade-up.delay-2{transition-delay:.24s}
+.fade-up.delay-3{transition-delay:.36s}
+.fade-in{opacity:0; transition:opacity .6s ease}
+.visible{opacity:1; transform:translateY(0)}
+
+/* Responsive tweaks */
+@media (max-width:767px){
+  .hero-section{height:60vh}
+  .page-header{height:28vh}
+  .card img{height:160px}
+}
